@@ -9,7 +9,7 @@ interface Props {
 export default function CharactersSection({ characters }: Props) {
   return (
     <section>
-      <Title title="Characters of the movie" />
+      <Title title="Personagens do filme" />
       <Carousel characters={characters} />
     </section>
   );

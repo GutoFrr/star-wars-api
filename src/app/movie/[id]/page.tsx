@@ -23,7 +23,11 @@ export default async function Movie({ params }: Props) {
 }
 
 async function getMovie(id: string) {
-  const movie = await serverSideRequest(`/films/${id}`, { cache: 'no-store' });
+  const movie = await serverSideRequest(`/films/${id}`, {
+    next: {
+      revalidate: 10,
+    },
+  });
 
   if (movie.episode_id > 6 || movie.episode_id <= 0) {
     throw new Error('Filme não encontrado');

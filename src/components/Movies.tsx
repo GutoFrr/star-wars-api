@@ -9,7 +9,11 @@ export default async function Movies() {
 }
 
 async function getMovies() {
-  const data = await serverSideRequest('/films', { cache: 'no-store' });
+  const data = await serverSideRequest('/films', {
+    next: {
+      revalidate: 10,
+    },
+  });
 
   data.results.map((item: Movie) => {
     item.urlId = item.url?.split('/')[5];

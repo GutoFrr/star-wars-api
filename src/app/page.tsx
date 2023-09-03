@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <>
       <section>
-        <Title title="Movies" />
+        <Title title="Filmes" />
         <Suspense fallback={<LoadingScreen title="Carregando filmes..." />}>
           {/* @ts-expect-error Async Server Component  */}
           <Movies />
         </Suspense>
       </section>
       <section>
-        <Title title="Characters" />
+        <Title title="Personagens" />
         <Suspense fallback={<LoadingScreen title="Carregando personagens..." />}>
           {/* @ts-expect-error Async Server Component */}
           <Characters />

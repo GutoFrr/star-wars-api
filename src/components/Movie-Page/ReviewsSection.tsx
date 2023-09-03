@@ -24,13 +24,13 @@ export default function ReviewsSection() {
 
   return (
     <section>
-      <Title title="Write a review" />
+      <Title title="Escreva uma avaliação" />
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-5 mb-8">
-        <FormRow labeltext="Your Name" name="name" type="text" />
-        <FormRow labeltext="Your E-Mail" name="email" type="email" />
+        <FormRow labeltext="Seu nome" name="name" type="text" />
+        <FormRow labeltext="Seu email" name="email" type="email" />
         <div className="flex flex-col col-span-2">
           <label htmlFor="review" className="">
-            Review
+            Avaliação
           </label>
           <textarea
             className="border border-theme-gray-200 rounded-[10px] py-2 px-3 resize-none h-32"
@@ -39,7 +39,7 @@ export default function ReviewsSection() {
         <button
           type="submit"
           className="bg-theme-green py-2 px-10 rounded-[10px] w-fit col-start-2 place-self-end">
-          Publish
+          Publicar
         </button>
       </form>
       {reviews?.map((item, index) => (

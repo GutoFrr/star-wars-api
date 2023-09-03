@@ -9,7 +9,11 @@ export default async function Characters() {
 }
 
 async function getCharacters() {
-  const data = await serverSideRequest('/people', { cache: 'no-store' });
+  const data = await serverSideRequest('/people', {
+    next: {
+      revalidate: 10,
+    },
+  });
 
   return data.results as Character[];
 }
