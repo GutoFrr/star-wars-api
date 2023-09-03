@@ -4,6 +4,8 @@ Antes de rodar o projeto, é necessário baixar as depêndencias.
 yarn
 ```
 
+Ou
+
 ```sh
 npm install
 ```
